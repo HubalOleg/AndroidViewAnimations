@@ -7,6 +7,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.animation.FastOutLinearInInterpolator;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -162,8 +163,8 @@ public class SignInFragment extends Fragment implements BackableFragment {
                 mChangeFragmentListener.onBackClick();
             }
         });
-        fadeAnim.setDuration(500);
-        fadeAnim.setInterpolator(new AccelerateInterpolator());
+        fadeAnim.setDuration(400);
+        fadeAnim.setInterpolator(new FastOutLinearInInterpolator());
         fadeAnim.start();
     }
 }
